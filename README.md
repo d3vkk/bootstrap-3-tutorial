@@ -1,6 +1,6 @@
 # Bootstrap 3 Tutorial
 
-![Bootstrap 3 Logo](https://github.com/d3vkk/bootstrap-3-tutorial/blob/master/bootstrap-3-logo.png)
+![Screenshot](https://github.com/d3vkk/bootstrap-3-tutorial/blob/master/screenshot.png)
 
 Bootstrap 3 Tutorial from Derek Banas. With short, useful comments.
 
