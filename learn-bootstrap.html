@@ -1,0 +1,358 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!--IN THE TITLE-->
+	<title>LEARN BOOTSTRAP USING v4.3.1</title>
+	<!--DETAILS-->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="author" content="Donald KK">
+	<!--COMPATIBILITY-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale = 1">
+	<!--  BOOTSTRAP CSS-->
+	<link rel="stylesheet" href="assets/bootstrap/bootstrap.css">
+	<!--CUSTOM STYLING-->
+	<style>
+		.jumbotron {
+			background-color: #2e2d88;
+			color: white;
+		}
+
+		.tab-content {
+			border-left: 1px solid #ddd;
+			border-right: 1px solid #ddd;
+			border-bottom: 1px solid #ddd;
+			padding: 10px;
+		}
+
+		.nav-tabs {
+			margin-bottom: 0;
+		}
+
+		.container {
+			background-color: gold;
+		}
+
+		.container-fluid {
+			background-color: goldenrod;
+		}
+
+		.btn-default {
+			background-color: white;
+		}
+
+		/*3. CUSTOMIZING BOOTSTRAP STYLE: CAROUSEL*/
+
+		/* Carousel Styling */
+		.slide1{
+			background: url('bulb.jpg') center center no-repeat;
+			height: 500px;
+			background-size: cover;
+		}
+
+		.slide2{
+			background: url('pattern1.png') center center no-repeat;
+			height: 500px;
+			background-size: cover;
+		}
+
+		.slide3{
+			background: url('pattern2.png') center center no-repeat;
+			height: 500px;
+			background-size: cover;
+		}
+
+		.carousel-caption h1 {
+			font-size: 5.4em;
+			font-family: cursive;
+			padding-bottom: .4em;
+		}
+
+		.carousel-caption p {
+			font-size: 2em;
+		}
+	</style>
+</head>
+
+<body>
+	<!--
+		1. INTRODUCTION: CONTAINER, JUMBOTRON, BUTTONS
+	-->
+	<!--Container: Has padding around (Necessary for bootstrap grid)-->
+	<div class="container">
+		<h1>Container</h1>
+		<!--Page-Header: Adds space around text and enlarges text-->
+		<div class="page-header">
+			<h1>Page Header</h1>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<h1>Container Fluid</h1>
+	</div>
+	<!--Container-Fluid: Enlarges font, places in rounded-corner box-->
+	<div class="jumbotron">
+		<h1>Jumbotron Container
+		</h1>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+			aliqua. Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et dolore
+			magna aliqua. Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et
+			dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut
+			labore et dolore magna aliqua.
+		</p>
+		<p>
+			<!--
+				Buttons: Each has a different look/rendering.
+				First Text being rendered indicates style and/or color
+				Second Text indicates size of button
+			-->
+			<a href="javascript:void();" class="btn btn-default btn-lg" role="button">Default, Large</a>
+			<button class="btn btn-danger" role="button">Danger</button>
+			<input type="button" value="Info" class="btn-info">
+			<button class="btn btn-primary btn-sm" role="button">Primary, Small</button>
+			<button class="btn btn-primary btn-dark" role="button">Primary & Dark</button>
+			<button class="btn btn-primary btn-outline-dark" role="button">Primary & Dark Font</button>
+			<button class="btn btn-success" role="button">Success</button>
+			<button class="btn btn-warning" role="button">Warning</button>
+			<button class="btn btn-link" role="button">Link</button>
+			<!--Role Attribute: helps screen readers identify how to interpret the element-->
+			<!--Disabling a button-->
+			<button class="btn btn-primary btn-sm" role="button" disabled="disabled">Primary, Small</button>
+			<!--Disabling a link-->
+			<a href="javascript:void();" class="btn btn-default btn-lg disabled" role="button">Default, Large</a>
+			<!--Button Group: Only one can be selected at a time-->
+			<div class="btn-group btn-group-lg" role="group">
+				<h4>Shirt Sizes:</h4>
+				<button class="btn btn-default">Small</button>
+				<button class="btn btn-default">Medium</button>
+				<button class="btn btn-default">Large</button>
+			</div>
+	</div>
+
+
+
+	<!--
+		2. BOOTSTRAP GRID: ROWS, COLUMNS, COLLAPSE
+	-->
+	<!--
+		Row: Twelve Column System for arranging HTML elements on a webpage
+
+		col-xs is used for Extra Small Screens (min-width = 481px and max-width: 767px)
+		col-sm is used for Small Screens (min-width = 768px and max-width: 991px)
+		col-md is used for Medium Screens (min-width = 992px and max-width: 1199px)
+		col-lg is used for Large screens (min-width = 1200px and max-width: 3000px)
+
+		col-lg-3
+		The number at the end represets how many columns it's gonna take out of the total twelve
+	-->
+	<!--Equally Sized Columns-->
+	<div class="container" style="background-color:#59cc96;">
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+				<h4>Column 1</h4>
+				Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod
+				placerat.
+				Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam
+				corper.
+				Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
+				congue gravida diam non fringilla.
+				Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
+				congue gravida diam non fringilla.
+				Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
+				congue gravida diam non fringilla.
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+				<h4>Column 2</h4>
+				Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod
+				placerat.
+				Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam
+				corper.
+				Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
+				congue gravida diam non fringilla.
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+				<h4>Column 3</h4>
+				Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod
+				placerat.
+				Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam
+				corper.
+				Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
+				congue gravida diam non fringilla.
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+				<h4>Column 4</h4>
+				Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod
+				placerat.
+				Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam
+				corper.
+				Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies
+				congue gravida diam non fringilla.
+			</div>
+		</div>
+	</div>
+	<!--Differently Sized Columns & Collapsible-->
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+				<!--data-toggle="collapse": collapses/hides data from the screen-->
+				<h4><a href="#col1Content" data-toggle="collapse">Column 1</a></h4>
+				<!--data-toggle="collapse in": shows by default then when clicked collapses/hides data from the screen-->
+				<div id="col1Content" class="collapse in">
+					Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non,
+					bibendum vitae dolor.
+					Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique
+					senectus et netus et malesuada fames ac turpis egestas.
+					In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-8 col-xs-12">
+				<h4><a href="#col2Content" data-toggle="collapse">Column 2</a></h4>
+				<div id="col2Content" class="collapse">
+					Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non,
+					bibendum vitae dolor.
+					Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique
+					senectus et netus et malesuada fames ac turpis egestas.
+					In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+				<h4><a href="#col3Content" data-toggle="collapse">Column 3</a></h4>
+				<div id="col3Content" class="collapse">
+					Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non,
+					bibendum vitae dolor.
+					Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique
+					senectus et netus et malesuada fames ac turpis egestas.
+					In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--Using Tables-->
+	<div class="container" style="background-color:white;">
+		<div class="row">
+			<div class="col-md-6"></div>
+			<div class="col-md-6">
+				<!--
+					table-hover changes the color of the row when the mouse hovers over it.
+					The rest of the attributes are for styling
+				-->
+				<table class="table table-bordered table-striped table-hover">
+					<thead>
+						<tr>
+							<td colspan="4">Table Title</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<!--Column Width is adjustable e.g this will take 2 of the total 6 columns-->
+							<th class="col-md-2"></th>
+							<!--Text alignment can be used-->
+							<th class="text-center">Column</th>
+							<th class="text-center">Column</th>
+							<th class="text-center">Column</th>
+						</tr>
+						<tr>
+							<td><a href="javascript:void();">Subtitle</a></td>
+							<td>Content</td>
+							<td>Content</td>
+							<td>Content</td>
+						</tr>
+						<tr>
+							<td><a href="javascript:void();">Subtitle</a></td>
+							<td>Content</td>
+							<td>Content</td>
+							<td>Content</td>
+						</tr>
+						<tr>
+							<td><a href="javascript:void();">Subtitle</a></td>
+							<td>Content</td>
+							<td>Content</td>
+							<td>Content</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!--
+		3. CUSTOMIZING BOOTSTRAP STYLE: CAROUSEL
+	-->
+	<!--
+		1. Change the link from bootstrap.min.css to bootstrap.css
+		2. Find the class/id you want to change on the bootstrap.css file
+		3. Then change the property you'd like to change
+		OR
+		You can change it by adding CSS in the head element (Called Embedded CSS) which will be prioritised over the External CSS
+	-->
+
+	<div id="theCarousel" class="carousel slide" data-ride="carousel">
+		<ol class="carousel-indicators">
+			<li data-target="#theCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#theCarousel" data-slide-to="1"></li>
+			<li data-target="#theCarousel" data-slide-to="2"></li>
+		</ol>
+		<div class="carousel-inner">
+			<div class="item active">
+				<div class="slide1"></div>
+				<div class="carousel-caption">
+					<h1>Caption Title 1</h1>
+					<p>Caption Description 1</p>
+					<p><a class="btn btn-primary btn-lg" href="javascript:void();">Carousel Button</a></p>
+				</div>
+			</div>
+			<div class="item">
+				<div class="slide2"></div>
+				<div class="carousel-caption">
+					<h1>Caption Title 2</h1>
+					<p>Caption Description 2</p>
+					<p><a class="btn btn-primary btn-lg" href="javascript:void();">Carousel Button</a></p>
+				</div>
+			</div>
+			<div class="item">
+				<div class="slide3"></div>
+				<div class="carousel-caption">
+					<h1>Caption Title 3</h1>
+					<p>Caption Description 3</p>
+					<p><a class="btn btn-primary btn-lg" href="javascript:void();">Carousel Button</a></p>
+				</div>
+			</div>
+		</div>
+		<a class="left carousel-control" href="#theCarousel" data-slide="prev">
+			<span class="fa fa-chevron-left"></span>
+		</a>
+		<a class="right carousel-control" href="#theCarousel" data-slide="next">
+			<span class="fa fa-chevron-right"></span>
+		</a>
+	</div>
+
+	<!--DIDN'T WORK-->
+	<!-- col-md-offset-6 -->
+
+	<!--Hiding Elements Based on Screen Size-->
+	<!-- <div class="container"> -->
+	<!--Hide for all screen sizes-->
+	<!-- <div class="well hidden-sm hidden-md hidden-lg">
+			<p>Screen &lt; 768px</p>
+		</div>
+		<div class="well hidden-md hidden-lg">
+			<p>Screen &lt; 768px and &lt; 992px</p>
+		</div>
+		<div class="well hidden-lg">
+			<p>Screen &lt; 992px and &lt; 1200px</p>
+		</div>
+		<div class="well">
+			<p>Screen &lt; 1200px</p>
+		</div>
+	</div> -->
+
+	<!--jQuery (Necessary For Bootstrap Javascript Plugins)-->
+	<script src="assets/jquery-3.3.1.min.js"></script>
+	<!--BOOTSTRAP JS-->
+	<script src="assets/bootstrap/bootstrap.min.js"></script>
+</body>
+
+</html>
